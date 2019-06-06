@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+   <loc>http://localhost:8888/jc2suga-master/sitemap/interviewsitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+   <loc>http://localhost:8888/jc2suga-master/sitemap/usersitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+   <loc>http://localhost:8888/jc2suga-master/sitemap/freshsitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+   <loc>http://localhost:8888/jc2suga-master/sitemap/infositemap.xml</loc>
+  </sitemap>
+  <sitemap>
+   <loc>http://localhost:8888/jc2suga-master/sitemap/questionsitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+   <loc>http://localhost:8888/jc2suga-master/sitemap/loginsitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+   <loc>http://localhost:8888/jc2suga-master/sitemap/addssitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+   <loc>http://localhost:8888/jc2suga-master/sitemap/attentionsitemap.xml</loc>
+  </sitemap>
+</sitemapindex>

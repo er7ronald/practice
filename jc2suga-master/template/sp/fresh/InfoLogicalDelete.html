@@ -1,0 +1,42 @@
+<!--# code saveRedirectPage #-->
+
+<!--# syscode setTitle (!--# alias cUser owner id name #--)の新卒採用求人 (!--# alias items_type category id name #--) [(!--# alias items_form work_style id name #--)] - (!--# code getData system ADMIN site_title #--) #-->
+<!--# syscode setKeywords (!--# alias items_type category id name #--),新卒採用,(!--# alias items_form work_style id name #--),(!--# alias cUser owner id name #--),求人,募集,(!--# code getData system ADMIN site_title #--) #-->
+<!--# syscode setDescription (!--# value name #--) #-->
+<!--# include head #-->
+<div id="contents">
+    <h2 class="job_h2">
+        <span class="cate">【<!--# alias items_type category id name #-->】</span><!--# value name #-->
+        <!--# setTimeFormat U #-->
+        <!--# ifbegin > attention_time (!--# code now u #--) #-->
+        <span class="pickup">おすすめ</span>
+        <!--# endif #-->
+    </h2>
+    <div class="main">
+        <div class="error_message">
+            <p>この求人情報は削除されました。</p>
+        </div>
+
+        <h2>この企業の他の求人</h2>
+        <div class="link_list">
+            <!--# code embedSearch type=(!--# get type #--)&run=true&id=(!--# value id #--)&id_PAL[]=unmatch+comp&owner=(!--# value owner #--)&owner_PAL[]=match+comp&embedID=other_items&class=cuser_job #-->
+        </div>
+
+        <h2>この求人と似た求人</h2>
+        <div class="link_list">
+            <!--# code embedSearch type=(!--# get type #--)&run=true&owner=(!--# value owner #--)&owner_PAL[]=unmatch+comp&work_place_adds=(!--# value work_place_adds #--)&work_place_adds_PAL[]=match+comp&category=(!--# value category #--)&category_PAL[]=match+comp&embedID=other_items&class=alike_job #-->
+        </div>
+
+        <!--# ifbegin ! match_e (!--# value category #--) / #-->
+        <h2><!--# valueAlias items_type (!--# value category #--) id name 新着 #-->のおすすめ求人</h2>
+        <div class="link_list">
+            <!--# async code embedSearch type=(!--# get type #--)&run=true&attention=true&attention_PAL[]=match+comp&attention_time_PAL[]=match gt&attention_time=(!--# code now u #--)&category=(!--# value category #--)&category_PAL[]=match+comp&embedID=other_items&class=pickup_job #-->
+        </div>
+        <!--# endif #-->
+
+        <!--# ecode drawSocial (!--# get type #--) (!--# get id #--) (!--# alias cUser owner id name #--)の中途採用求人\ (!--# alias items_type category id name #--)\ [(!--# alias items_form work_style id name #--)]\ -\ (!--# code getData system ADMIN site_title #--) #-->
+
+    </div><!--main END-->
+</div><!--contents END-->
+
+<!--# include foot #-->

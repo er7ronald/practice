@@ -1,0 +1,26 @@
+<!--# readhead notice #-->
+	<!--# setTimeFormat Y年m月d日\ H時i分 #-->
+	<!--# ifbegin login admin #-->
+		<div style="margin: 20px 5px 20px 170px; color: #f00;">
+			メンテナンス開始予定：<!--# value begin_time #-->
+		</div>
+	<!--# else #-->
+		<div style="margin: 20px 5px; color: #f00;">
+			<!--# value begin_time #-->よりシステムメンテナンスを行います。<br />
+			登録・編集中のデータがある場合はメンテナンス開始前に作業を完了していただくようお願いいたします。
+		</div>
+	<!--# endif #-->
+<!--# readend #-->
+
+<!--# readhead now #-->
+	<!--# setTimeFormat Y年m月d日\ H時i分 #-->
+	<!--# ifbegin login admin #-->
+		<div style="margin: 20px 5px 20px 170px; color: #f00;">
+			<!--# ifbegin boolean use_end_time #-->
+				メンテナンス実行中(終了予定：<!--# value end_time #-->)
+			<!--# else #-->
+				メンテナンス実行中(終了時刻未定)
+			<!--# endif #-->
+		</div>
+	<!--# endif #-->
+<!--# readend #-->

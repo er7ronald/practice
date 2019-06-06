@@ -1,0 +1,17 @@
+<!--# setTimeFormat Y/m/d #-->
+<tr>
+	<td><span class="bold_black"><a href="index.php?app_controller=info&type=nUser&id=(!--# value id #--)"><!--# value id #--></a></span></td>
+	<td><!--# value sex #--></td>
+	<td><!--# code drawAgeByBirth (!--# value birthyear #--) (!--# value birthmonth #--) (!--# value birthday #--) #-->歳</td>
+	<td><!--# alias adds adds id name #--></td>
+	<td><!--# arrayAlias job_type wish_job_type id name #--></td>
+	<td><!--# arrayAlias job_form wish_job_form id name #--></td>
+<!--# ifbegin val= (!--# view Conf drawData user scout #--) on #-->
+	<td><!--# view Scout drawStateInfo (!--# value id #--) #--></td>
+<!--# endif #-->
+	<td>
+		<ul class="operation clearfix">
+			<li class="more"><a href="index.php?app_controller=info&type=nUser&id=(!--# value id #--)" title="詳細表示">詳細表示</a></li>
+		</ul>
+	</td>
+</tr>
